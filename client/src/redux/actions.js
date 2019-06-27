@@ -6,7 +6,6 @@ export function listCars(cars) {
 }
 
 export function newCar(car) {
-  console.log('s')
   return {
     type: 'CREATE_CAR',
     value: car

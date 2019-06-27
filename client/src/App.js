@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import "./App.css";
+import ListOfCarsContainer from "./containers/ListOfCarsContainer";
+import CreateCar from "./containers/CreateCarContainer"
 
 class App extends Component {
   constructor() {
     super();
   }
-  componentDidMount() {
-  }
   render() {
     return (
       <div>
-        Client
+        <ListOfCarsContainer/>
+        <CreateCar />
       </div>
     );
   }

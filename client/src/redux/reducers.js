@@ -23,7 +23,6 @@ const cars = (state = [], action) => {
     case 'LIST_CARS':
       return action.value
     case 'CREATE_CAR':
-      console.log(action.value)
       newState.push(action.value)
       return newState
     // case 'DELETE_MOVIE':
