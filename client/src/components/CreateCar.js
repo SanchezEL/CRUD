@@ -21,7 +21,7 @@ export default class CreateCar extends Component {
     e.preventDefault()
 
     console.log(this.state.year)
-    debugger
+    
     fetch('/cars', {
       method: 'POST',
       headers: {
@@ -35,7 +35,11 @@ export default class CreateCar extends Component {
       })
     })
     .then(res => res.json())
-    .then(result => this.props.createCar(result))
+    .then(result => {
+      this.props.newCar(result)
+      console.log(result, "res")
+    })
+    
     .then(() => {
       this.setState({
         brand: '',
